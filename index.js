@@ -4,7 +4,7 @@ var HueApi = hue.HueApi;
 var lightState = hue.lightState;
 var Q = require('q');
 
-var lightId = 3;
+var lightId = parseInt(process.env.HUE_LIGHT_ID);
 
 var githubClient = github.client({
   username: process.env.GITHUB_USERNAME,
